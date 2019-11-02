@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>JavaScript - Table without Loop.</title>
+		<script type="text/javascript">
+			function printTable(){
+                var	count = [1,2,3,4,5,6,7,8,9,10];	
+			    var	num=Number(document.getElementById('txtNumber').value);
+                //var result;
+                //console.log(num);
+                // count.forEach(printMytable);
+                // function printMytable(value, index, array) {
+                //      result= document.getElementById("pResult");
+                //      result.innerHTML+= num*value + '</br>';
+                // }
+
+                count.forEach(function(ptable) {
+                    console.log(num * ptable);
+                    document.getElementById("pResult").innerHTML+= num * ptable +'</br>'
+                });
+				
+			}
+		</script>
+	</head>
+
+	<body style="text-align: center;">
+		<h1>JavaScript - Table without loop</h1>
+		<p><input type="text" id="txtNumber" placeholder="Enter number"/></p>
+		<p><input type="button" value="Print Table." onclick='printTable()'/>
+		<!--print numbers-->
+		<p id="pResult"></p>
+	</body>
+
+</html>
