@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <script>
+            function Game (pname,pscore,ptype,plocation,plevel,pcoins) {
+               
+                this.name= pname;
+                this.score= 0;
+                this.location= plocation;
+                this.playerType= ptype;
+                this.level=plevel;
+                this.coins = pcoins;
+                if(this.name==""){
+                        this.name="Anonymous"
+                    }
+                this.hit=function(){
+                    if(this.coins==0){
+                        console.log(this.name+" have not sufficient coins to play and his score is:- "+this.score)
+                    }
+                    else{
+                      this.score = this.score+1;
+                      this.coins = this.coins+1;
+                    }
+                }
+                this.miss=function(){
+                    if(this.coins==0){
+                        console.log(pname+ " have not sufficient coins to play and his score is:- "+this.score)
+                    }
+                    else{
+                      this.score = this.score-1;
+                      this.coins = this.coins-1;
+                    }
+                }
+            }
+            var player1= new Game("Honey","pscore","Primary","Mohali",22,0);
+            var player2= new Game("Rahul","pscore","Secondary","Delhi",02,50);
+            var player3= new Game("","pscore","Third","Chandigarh",01,55);
+            var player4= new Game("","pscore","Fourth","Panchkula",04,0);
+            
+            player1.hit();
+            player2.hit();
+            player3.hit();
+            player4.hit();
+          
+
+            console.log(player1);
+            console.log(player2);
+            console.log(player3);
+            console.log(player4);
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
