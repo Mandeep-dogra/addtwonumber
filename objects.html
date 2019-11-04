@@ -14,17 +14,26 @@
                         fax: '9870987',
                         email: 'honey.bhardwaj24@gmail.com',
                         phone:'9876659987',
+                        contactSubFun: function(){
+                            console.log(`Mobile No:- ${school.contactInfo.mob} Email Id:- ${school.contactInfo.email}`); 
+                        }
                     },
                     feeInfo: {
                         RegistraionFee: '78787',
                         AddmissionFee: '7657',
                         tutionFee: '455',
-                    }
+                        schoolFeeFun: function(){
+                            console.log(`Ragistraion Fee:-${school.feeInfo.RegistraionFee} Addmition Fee:-${school.feeInfo.AddmissionFee}`)
+                        }
+                    },
 
                 }  
                 school.displayInfo(); 
-                console.log(`Mobile No:- ${school.contactInfo.mob} Email Id:- ${school.contactInfo.email}`); 
-                console.log(`Ragistraion Fee:-${school.feeInfo.RegistraionFee} Addmition Fee:-${school.feeInfo.AddmissionFee}`)
+                // console.log(`Mobile No:- ${school.contactInfo.mob} Email Id:- ${contactInfo.email}`); 
+                school.contactInfo.contactSubFun(); 
+                school.feeInfo.schoolFeeFun(); 
+                
+                
             } 
                          
                 //school.displayInfo(); 

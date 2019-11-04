@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <script>
+            function game () {
+                this.name='';
+                this.score=0;
+                this.location='';
+                this.playerType='';
+                this.level='';
+                
+                this.hit=function(){
+                    this.score = this.score+1;
+                }
+                this.miss=function(){
+                    this.score = this.score-1;
+                }
+            }
+            var player1= new game();
+            var player2= new game();
+            var player3= new game();
+            var player4= new game();
+          
+
+            player1.name="Honey";
+            player2.name="Rahul";
+            player3.name="Mohit";
+            player4.name="Pooja";
+
+            player1.playerType="Primary";
+            player2.playerType="Secondary";
+            player3.playerType="Third";
+            player4.playerType="Fourth";
+
+
+            player1.location="Mohali";
+            player2.location="Delhi";
+            player3.location="Chandigarh";
+            player4.location="Panchkula";
+
+            player1.level="22";
+            player2.level="02";
+            player3.level="01";
+            player4.level="04";
+
+            
+            player2.hit();
+            player2.hit();
+            player1.miss();
+            player3.hit();
+            player4.hit();
+            player4.hit();
+            player4.hit();
+            player1.miss();
+
+            console.log(player1);
+            console.log(player2);
+            console.log(player3);
+            console.log(player4);
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
