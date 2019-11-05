@@ -1,0 +1,50 @@
+<html>
+<head>
+<script>
+
+
+ var game = function(){
+this.score = 0;
+this.name = '';
+this.miss = function(obj){
+this.score= this.score -1;
+obj.score = obj.score +1;
+
+}
+this.hit = function(obj){
+this.score = this.score +1;
+obj.score= obj.score -1;
+}
+
+ }
+
+
+ game.prototype.location="chandigarh";
+
+ var player1 = new game();
+ var player2 = new game();
+ var player3 = new game();
+
+ player1.name = "Mandeep"
+ player2.name = "Anil"
+ player3.name = "sunil"
+ player3.location = "Mohali"
+ console.log(player1);
+ console.log(player2);
+ console.log(player3);
+
+ player2.hit(player1);
+ player3.hit(player1);
+
+ 
+ console.log(player1.name, player1.score);
+ console.log(player2.name, player2.score);
+ console.log(player3.name, player3.score);
+
+</script>
+</head>
+<body>
+
+
+</body>
+</html>
